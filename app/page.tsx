@@ -1,52 +1,74 @@
 import Image from "next/image";
+
 export default function Home() {
   return (
-    <main className="bg-[#090909] text-white overflow-hidden">
+    <main className="min-h-screen bg-[#090909] text-white">
 
-      <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
+      {/* HEADER */}
+
+      <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-black/40 backdrop-blur-xl">
+
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
 
-          <h1 className="text-xl font-black tracking-[4px]">
+          <h1 className="text-xl font-black tracking-[6px]">
             CLOTHES SYSTEM
           </h1>
 
-          <nav className="hidden md:flex gap-10 text-sm uppercase tracking-[3px]">
-            <a href="#">Главная</a>
-            <a href="#">Каталог</a>
-            <a href="#">Конструктор</a>
-            <a href="#">Контакты</a>
+          <nav className="hidden gap-10 text-sm uppercase tracking-[3px] md:flex">
+
+            <a href="#catalog" className="hover:text-neutral-400">
+              Каталог
+            </a>
+
+            <a href="#works" className="hover:text-neutral-400">
+              Наши работы
+            </a>
+
+            <a href="#contacts" className="hover:text-neutral-400">
+              Контакты
+            </a>
+
           </nav>
 
-          <button className="rounded-full border border-white px-6 py-3 hover:bg-white hover:text-black transition">
+          <a
+            href="https://wa.me/77000000000"
+            className="rounded-full border border-white px-6 py-3 transition hover:bg-white hover:text-black"
+          >
             WhatsApp
-          </button>
+          </a>
 
         </div>
+
       </header>
 
       {/* HERO */}
 
-      <section className="relative min-h-screen">
+      <section className="relative flex min-h-screen items-center">
 
-        <div className="mx-auto flex min-h-screen max-w-7xl items-center justify-between px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-20 px-8 pt-24 lg:grid-cols-2">
 
-          {/* LEFT */}
+          <div>
 
-          <div className="max-w-2xl">
-
-            <p className="mb-6 text-sm uppercase tracking-[10px] text-neutral-500">
-              CLOTHES SYSTEM
+            <p className="mb-6 uppercase tracking-[10px] text-neutral-500">
+              PREMIUM STREETWEAR
             </p>
 
-            <h1 className="text-6xl font-black leading-[0.9] md:text-8xl xl:text-9xl">
-              WEAR
+            <h1 className="text-6xl font-black leading-[0.9] md:text-8xl">
+
+              DON'T LOOK.
+
               <br />
-              YOUR
+
+              CREATE
+
               <br />
-              IDEA.
+
+              YOUR OWN.
+
             </h1>
 
-            <p className="mt-8 max-w-lg text-lg leading-8 text-neutral-400">
+            <p className="mt-10 max-w-xl text-xl leading-9 text-neutral-400">
+
               Создай футболку, худи или мерч
               со своим дизайном.
 
@@ -54,175 +76,436 @@ export default function Home() {
 
               От одного экземпляра.
 
-              Быстро.
-
-              Качественно.
             </p>
 
-            <div className="mt-12 flex flex-wrap gap-5">
+            <div className="mt-14 flex flex-wrap gap-5">
 
-              <button className="rounded-full bg-white px-8 py-4 font-semibold text-black transition duration-300 hover:scale-105">
+              <button className="rounded-full bg-white px-8 py-4 font-bold text-black transition hover:scale-105">
+
                 Создать дизайн
+
               </button>
 
-              <button className="rounded-full border border-white px-8 py-4 transition duration-300 hover:bg-white hover:text-black">
-                Каталог
+              <button className="rounded-full border border-white px-8 py-4 transition hover:bg-white hover:text-black">
+
+                Смотреть каталог
+
               </button>
 
             </div>
 
           </div>
 
-          {/* RIGHT */}
+          <div className="relative flex justify-center">
 
-          <div className="hidden lg:flex">
+            <div className="absolute h-[650px] w-[650px] rounded-full bg-white/10 blur-[140px]" />
 
-            <div className="relative">
-
-              <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-[120px]" />
-
-              <Image
-  src="/hero-shirt.png"
-  alt="Create your own design"
-  width={520}
-  height={650}
-  className="relative w-[520px] h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]"
-  priority
-/>
-
-            </div>
+            <Image
+              src="/hero-shirt.png"
+              alt="Hero"
+              width={700}
+              height={850}
+              priority
+              className="relative w-[650px] h-auto"
+            />
 
           </div>
 
         </div>
 
-      </section>      {/* ABOUT */}
+      </section>      {/* CATALOG */}
 
-      <section className="border-y border-white/10 py-40">
+      <section
+        id="catalog"
+        className="border-t border-white/10 bg-[#0b0b0b] py-32"
+      >
+        <div className="mx-auto max-w-7xl px-8">
 
-        <div className="mx-auto max-w-6xl px-8 text-center">
-
-          <p className="mb-6 text-sm uppercase tracking-[8px] text-neutral-500">
-            О НАС
+          <p className="mb-4 uppercase tracking-[8px] text-neutral-500">
+            КАТАЛОГ
           </p>
 
           <h2 className="text-5xl font-black md:text-7xl">
-            Одежда,
+            ВЫБЕРИ
             <br />
-            которая выглядит
-            <br />
-            дорого.
+            СВОЮ ОСНОВУ
           </h2>
 
-          <p className="mx-auto mt-10 max-w-3xl text-xl leading-9 text-neutral-400">
-            Мы создаем одежду с индивидуальными принтами,
-            брендированием и дизайном.
+          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
 
-            <br /><br />
+            <div className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition hover:border-white">
 
-            Каждая вещь производится
-            под конкретный заказ.
-            Без складов.
-            Без шаблонов.
-            Только твоя идея.
-          </p>
+              <Image
+                src="/catalog-shirt.jpg"
+                alt="Футболки"
+                width={700}
+                height={700}
+                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+
+              <div className="p-8">
+
+                <h3 className="text-2xl font-bold">
+                  Футболки
+                </h3>
+
+                <p className="mt-3 text-neutral-400">
+                  Классика и Oversize
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition hover:border-white">
+
+              <Image
+                src="/catalog-hoodie.jpg"
+                alt="Худи"
+                width={700}
+                height={700}
+                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+
+              <div className="p-8">
+
+                <h3 className="text-2xl font-bold">
+                  Худи
+                </h3>
+
+                <p className="mt-3 text-neutral-400">
+                  Premium Oversize
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition hover:border-white">
+
+              <Image
+                src="/catalog-sweatshirt.jpg"
+                alt="Свитшоты"
+                width={700}
+                height={700}
+                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+
+              <div className="p-8">
+
+                <h3 className="text-2xl font-bold">
+                  Свитшоты
+                </h3>
+
+                <p className="mt-3 text-neutral-400">
+                  Любые принты
+                </p>
+
+              </div>
+
+            </div>
+
+            <div className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition hover:border-white">
+
+              <Image
+                src="/catalog-cap.jpg"
+                alt="Кепки"
+                width={700}
+                height={700}
+                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+
+              <div className="p-8">
+
+                <h3 className="text-2xl font-bold">
+                  Кепки
+                </h3>
+
+                <p className="mt-3 text-neutral-400">
+                  Печать и вышивка
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
 
         </div>
 
-      </section>
+      </section>      {/* OUR WORKS */}
 
-      {/* SERVICES */}
-
-      <section className="py-40">
+      <section
+        id="works"
+        className="py-32"
+      >
 
         <div className="mx-auto max-w-7xl px-8">
 
-          <p className="mb-6 text-sm uppercase tracking-[8px] text-neutral-500">
-            ЧТО МЫ ДЕЛАЕМ
-          </p>
-
-          <div className="grid gap-8 md:grid-cols-3">
-
-            <div className="rounded-3xl border border-white/10 p-10">
-              <h3 className="mb-4 text-3xl font-bold">
-                Футболки
-              </h3>
-
-              <p className="leading-8 text-neutral-400">
-                Oversize,
-                классические,
-                премиальный хлопок,
-                любые размеры.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 p-10">
-              <h3 className="mb-4 text-3xl font-bold">
-                Худи
-              </h3>
-
-              <p className="leading-8 text-neutral-400">
-                Индивидуальный дизайн,
-                логотипы,
-                надписи,
-                брендирование.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 p-10">
-              <h3 className="mb-4 text-3xl font-bold">
-                Мерч
-              </h3>
-
-              <p className="leading-8 text-neutral-400">
-                Для брендов,
-                компаний,
-                мероприятий
-                и команд.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>      {/* CTA */}
-
-      <section className="border-t border-white/10 py-40">
-
-        <div className="mx-auto max-w-5xl px-8 text-center">
-
-          <p className="mb-6 text-sm uppercase tracking-[8px] text-neutral-500">
-            ГОТОВ?
+          <p className="mb-4 uppercase tracking-[8px] text-neutral-500">
+            НАШИ РАБОТЫ
           </p>
 
           <h2 className="text-5xl font-black md:text-7xl">
-            СОЗДАЙ
+            РЕАЛЬНЫЕ
             <br />
-            СВОЕ.
+            ЗАКАЗЫ
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-xl text-neutral-400">
-            Создай одежду,
-            которую невозможно купить
-            в магазине.
-          </p>
+          <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
-          <div className="mt-14 flex justify-center gap-6">
+            <Image
+              src="/work1.jpg"
+              alt="work"
+              width={900}
+              height={900}
+              className="rounded-3xl object-cover transition duration-500 hover:scale-[1.02]"
+            />
 
-            <button className="rounded-full bg-white px-10 py-5 text-lg font-bold text-black transition hover:scale-105">
-              Создать дизайн
-            </button>
+            <Image
+              src="/work2.jpg"
+              alt="work"
+              width={900}
+              height={900}
+              className="rounded-3xl object-cover transition duration-500 hover:scale-[1.02]"
+            />
 
-            <button className="rounded-full border border-white px-10 py-5 text-lg transition hover:bg-white hover:text-black">
-              WhatsApp
-            </button>
+            <Image
+              src="/work3.jpg"
+              alt="work"
+              width={900}
+              height={900}
+              className="rounded-3xl object-cover transition duration-500 hover:scale-[1.02]"
+            />
 
           </div>
 
         </div>
 
       </section>
+
+      {/* ADVANTAGES */}
+
+      <section className="border-y border-white/10 py-32">
+
+        <div className="mx-auto grid max-w-7xl gap-10 px-8 md:grid-cols-2 xl:grid-cols-4">
+
+          <div>
+
+            <h3 className="text-3xl font-black">
+              01
+            </h3>
+
+            <p className="mt-4 text-2xl font-semibold">
+              Premium качество
+            </p>
+
+            <p className="mt-3 leading-8 text-neutral-400">
+              Плотный хлопок,
+              качественная печать
+              и долговечные материалы.
+            </p>
+
+          </div>
+
+          <div>
+
+            <h3 className="text-3xl font-black">
+              02
+            </h3>
+
+            <p className="mt-4 text-2xl font-semibold">
+              От 1 штуки
+            </p>
+
+            <p className="mt-3 leading-8 text-neutral-400">
+              Не нужен большой тираж.
+              Сделаем даже одну футболку.
+            </p>
+
+          </div>
+
+          <div>
+
+            <h3 className="text-3xl font-black">
+              03
+            </h3>
+
+            <p className="mt-4 text-2xl font-semibold">
+              Быстро
+            </p>
+
+            <p className="mt-3 leading-8 text-neutral-400">
+              Большинство заказов
+              готовы за 1–2 дня.
+            </p>
+
+          </div>
+
+          <div>
+
+            <h3 className="text-3xl font-black">
+              04
+            </h3>
+
+            <p className="mt-4 text-2xl font-semibold">
+              Любой дизайн
+            </p>
+
+            <p className="mt-3 leading-8 text-neutral-400">
+              Фото,
+              логотипы,
+              надписи,
+              брендирование
+              и мерч.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>      {/* REVIEWS */}
+
+      <section className="py-32">
+
+        <div className="mx-auto max-w-7xl px-8">
+
+          <p className="mb-4 uppercase tracking-[8px] text-neutral-500">
+            ОТЗЫВЫ
+          </p>
+
+          <h2 className="text-5xl font-black md:text-7xl">
+            НАМ
+            <br />
+            ДОВЕРЯЮТ
+          </h2>
+
+          <div className="mt-20 grid gap-8 md:grid-cols-3">
+
+            <div className="rounded-3xl border border-white/10 p-8">
+              <p className="text-neutral-300 leading-8">
+                Отличное качество. Принт получился даже лучше, чем ожидал.
+              </p>
+
+              <h3 className="mt-8 font-bold">
+                ★★★★★
+              </h3>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 p-8">
+              <p className="text-neutral-300 leading-8">
+                Сделали очень быстро. Буду заказывать ещё.
+              </p>
+
+              <h3 className="mt-8 font-bold">
+                ★★★★★
+              </h3>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 p-8">
+              <p className="text-neutral-300 leading-8">
+                Лучшее качество печати, которое видел в Алматы.
+              </p>
+
+              <h3 className="mt-8 font-bold">
+                ★★★★★
+              </h3>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CONTACT */}
+
+      <section
+        id="contacts"
+        className="border-t border-white/10 py-32"
+      >
+
+        <div className="mx-auto max-w-5xl px-8 text-center">
+
+          <h2 className="text-5xl font-black md:text-7xl">
+            ГОТОВ
+            <br />
+            СОЗДАТЬ
+            <br />
+            СВОЙ ДИЗАЙН?
+          </h2>
+
+          <p className="mx-auto mt-8 max-w-2xl text-xl leading-9 text-neutral-400">
+            Напиши нам в WhatsApp и мы поможем реализовать любую идею.
+          </p>
+
+          <a
+            href="https://wa.me/77000000000"
+            className="mt-14 inline-block rounded-full bg-white px-10 py-5 text-lg font-bold text-black transition hover:scale-105"
+          >
+            Написать в WhatsApp
+          </a>
+
+        </div>
+
+      </section>
+<section id="catalog" className="py-24 border-t border-white/10">
+  <div className="mx-auto max-w-7xl px-8">
+
+    <h2 className="text-5xl font-black text-center mb-16">
+      КАТАЛОГ
+    </h2>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {[
+        "/catalog-1.jpeg",
+        "/catalog-2.jpeg",
+        "/catalog-3.jpeg",
+        "/catalog-4.jpeg",
+        "/catalog-5.jpeg",
+        "/catalog-6.jpeg",
+        "/catalog-7.jpeg",
+        "/catalog-8.jpeg",
+        "/catalog-9.jpeg",
+      ].map((img, index) => (
+
+        <div
+          key={index}
+          className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 hover:scale-[1.03] duration-300"
+        >
+
+          <Image
+            src={img}
+            alt=""
+            width={700}
+            height={900}
+            className="w-full h-full object-cover"
+          />
+
+        </div>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
+      <footer className="border-t border-white/10 py-12">
+
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-8 md:flex-row">
+
+          <h2 className="text-xl font-black tracking-[6px]">
+            CLOTHES SYSTEM
+          </h2>
+
+          <p className="text-neutral-500">
+            © 2026 Clothes System. All rights reserved.
+          </p>
+
+        </div>
+
+      </footer>
 
     </main>
   );
