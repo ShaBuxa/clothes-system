@@ -1,6 +1,28 @@
+import Image from "next/image";
 export default function Home() {
   return (
     <main className="bg-[#090909] text-white overflow-hidden">
+
+      <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-xl border-b border-white/10">
+        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
+
+          <h1 className="text-xl font-black tracking-[4px]">
+            CLOTHES SYSTEM
+          </h1>
+
+          <nav className="hidden md:flex gap-10 text-sm uppercase tracking-[3px]">
+            <a href="#">Главная</a>
+            <a href="#">Каталог</a>
+            <a href="#">Конструктор</a>
+            <a href="#">Контакты</a>
+          </nav>
+
+          <button className="rounded-full border border-white px-6 py-3 hover:bg-white hover:text-black transition">
+            WhatsApp
+          </button>
+
+        </div>
+      </header>
 
       {/* HERO */}
 
@@ -59,11 +81,14 @@ export default function Home() {
 
               <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-[120px]" />
 
-              <img
-                src="/hero-shirt.png"
-                alt="Create your own design"
-                className="relative w-[520px] drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]"
-              />
+              <Image
+  src="/hero-shirt.png"
+  alt="Create your own design"
+  width={520}
+  height={650}
+  className="relative w-[520px] h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.7)]"
+  priority
+/>
 
             </div>
 
