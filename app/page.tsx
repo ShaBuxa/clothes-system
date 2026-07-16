@@ -459,37 +459,98 @@ export default function Home() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       {[
-        "/catalog-1.jpeg",
-        "/catalog-2.jpeg",
-        "/catalog-3.jpeg",
-        "/catalog-4.jpeg",
-        "/catalog-5.jpeg",
-        "/catalog-6.jpeg",
-        "/catalog-7.jpeg",
-        "/catalog-8.jpeg",
-        "/catalog-9.jpeg",
-      ].map((img, index) => (
+       [
+{
+image: "/catalog-1.jpeg",
+name: "Футболка Oversize",
+price: "8 900 ₸",
+},
+{
+image: "/catalog-2.jpeg",
+name: "Футболка Oversize",
+price: "8 900 ₸",
+},
+{
+image: "/catalog-3.jpeg",
+name: "Футболка Oversize",
+price: "6 500 ₸",
+},
+{
+image: "/catalog-4.jpeg",
+name: "Футболка Oversize",
+price: "6 500 ₸",
+},
+{
+image: "/catalog-5.jpeg",
+name: "Футболка Oversize",
+price: "6 500 ₸",
+},
+{
+image: "/catalog-6.jpeg",
+name: "Футболка Oversize",
+price: "7 500 ₸",
+},
+{
+image: "/catalog-7.jpeg",
+name: "Футболка Oversize",
+price: "6 500 ₸",
+},
+{
+image: "/catalog-8.jpeg",
+name: "Футболка Oversize",
+price: "7 500 ₸",
+},
+{
+image: "/catalog-9.jpeg",
+name: "Футболка Oversize",
+price: "7 500 ₸",
+},
+].map((item, index) => (
 
         <div
-          key={index}
-          className="overflow-hidden rounded-3xl border border-white/10 bg-white/5 hover:scale-[1.03] duration-300"
-        >
+  key={index}
+  className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition duration-300 hover:-translate-y-2 hover:border-white/30"
+>
 
-          <Image
-            src={img}
-            alt=""
-            width={700}
-            height={900}
-            className="w-full h-full object-cover"
-          />
+  <Image
+    src={item.image}
+    alt={item.name}
+    width={700}
+    height={900}
+    className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105"
+  />
 
-        </div>
+  <div className="p-6">
 
-      ))}
+    <h3 className="text-xl font-bold">
+      {item.name}
+    </h3>
+
+    <p className="mt-2 text-neutral-400">
+      Premium хлопок · Индивидуальный принт
+    </p>
+
+    <div className="mt-5 flex items-center justify-between">
+
+      <span className="text-xl font-bold">
+        {item.price}
+      </span>
+
+      <a
+        href="https://wa.me/77000000000"
+        className="rounded-full border border-white px-5 py-2 text-sm transition hover:bg-white hover:text-black"
+      >
+        Заказать
+      </a>
 
     </div>
 
   </div>
+
+</div>
+
+))}
+
 </section>
       <footer className="border-t border-white/10 py-12">
 
