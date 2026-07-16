@@ -1,6 +1,10 @@
+"use client";
 import Image from "next/image";
 
+import { useState } from "react";
+
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const catalog = [
   {
     image: "/catalog-1.jpeg",
@@ -184,54 +188,64 @@ export default function Home() {
             ЗАКАЗЫ
           </h2>
 
-          <div className="mt-20 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div onClick={() => setSelectedImage("/work1.jpg")} className="cursor-pointer">
+  <Image
+    src="/work1.jpg"
+    alt="work"
+    width={900}
+    height={900}
+    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+  />
+</div>
 
-            <Image
-              src="/work1.jpg"
-              alt="work"
-              width={900}
-              height={900}
-              className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-            />
+            <div onClick={() => setSelectedImage("/work2.jpg")} className="cursor-pointer">
+  <Image
+    src="/work2.jpg"
+    alt="work"
+    width={900}
+    height={900}
+    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+  />
+</div>
 
-            <Image
-              src="/work2.jpg"
-              alt="work"
-              width={900}
-              height={900}
-              className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-            />
+            <div onClick={() => setSelectedImage("/work3.jpg")} className="cursor-pointer">
+  <Image
+    src="/work3.jpg"
+    alt="work"
+    width={900}
+    height={900}
+    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+  />
+</div>
+            <div onClick={() => setSelectedImage("/work4.jpg")} className="cursor-pointer">
+  <Image
+    src="/work4.jpg"
+    alt="work"
+    width={900}
+    height={900}
+    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+  />
+</div>
 
-            <Image
-              src="/work3.jpg"
-              alt="work"
-              width={900}
-              height={900}
-              className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-            />
-            <Image
-  src="/work4.jpg"
-  alt="work"
-  width={900}
-  height={900}
-  className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-/>
+<div onClick={() => setSelectedImage("/work5.jpg")} className="cursor-pointer">
+  <Image
+    src="/work5.jpg"
+    alt="work"
+    width={900}
+    height={900}
+    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+  />
+</div>
 
-<Image
-  src="/work5.jpg"
-  alt="work"
-  width={900}
-  height={900}
-  className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-/>
-
-<Image
-  src="/work6.jpg"
-  alt="work"
-  width={900}
-  height={900}
-  className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-/>
+<div onClick={() => setSelectedImage("/work6.jpg")} className="cursor-pointer">
+  <Image
+    src="/work6.jpg"
+    alt="work"
+    width={900}
+    height={900}
+    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+  />
+</div>
 
           </div>
 
@@ -478,6 +492,20 @@ export default function Home() {
         </div>
 
       </footer>
+{selectedImage && (
+  <div
+    onClick={() => setSelectedImage(null)}
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
+  >
+    <Image
+      src={selectedImage}
+      alt="preview"
+      width={1200}
+      height={1200}
+      className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain"
+    />
+  </div>
+)}
 <a
   href="https://wa.me/77067075261"
   target="_blank"
