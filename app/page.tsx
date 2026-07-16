@@ -156,13 +156,13 @@ export default function Home() {
             <div className="absolute h-[650px] w-[650px] rounded-full bg-white/10 blur-[140px]" />
 
             <Image
-              src="/black-shirt.png"
-              alt="Hero"
-              width={700}
-              height={850}
-              priority
-              className="relative w-[650px] h-auto"
-            />
+  src="/black-shirt.png"
+  alt="Hero"
+  width={1400}
+  height={1700}
+  priority
+  className="relative w-[1300px] h-auto"
+/>
 
           </div>
 
@@ -183,73 +183,75 @@ export default function Home() {
           </p>
 
           <h2 className="text-5xl font-black md:text-7xl">
-            РЕАЛЬНЫЕ
-            <br />
-            ЗАКАЗЫ
-          </h2>
+  РЕАЛЬНЫЕ
+  <br />
+  ЗАКАЗЫ
+</h2>
 
-          <div onClick={() => setSelectedImage("/work1.jpg")} className="cursor-pointer">
-  <Image
-    src="/work1.jpeg"
-    alt="work"
-    width={900}
-    height={900}
-    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-  />
+<div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+  <div onClick={() => setSelectedImage("/work1.jpeg")} className="cursor-pointer">
+    <Image
+      src="/work1.jpeg"
+      alt="work"
+      width={900}
+      height={900}
+      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
+  <div onClick={() => setSelectedImage("/work2.jpeg")} className="cursor-pointer">
+    <Image
+      src="/work2.jpeg"
+      alt="work"
+      width={900}
+      height={900}
+      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
+  <div onClick={() => setSelectedImage("/work3.jpeg")} className="cursor-pointer">
+    <Image
+      src="/work3.jpeg"
+      alt="work"
+      width={900}
+      height={900}
+      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
+  <div onClick={() => setSelectedImage("/work4.jpeg")} className="cursor-pointer">
+    <Image
+      src="/work4.jpeg"
+      alt="work"
+      width={900}
+      height={900}
+      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
+  <div onClick={() => setSelectedImage("/work5.jpeg")} className="cursor-pointer">
+    <Image
+      src="/work5.jpeg"
+      alt="work"
+      width={900}
+      height={900}
+      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
+  <div onClick={() => setSelectedImage("/work6.jpeg")} className="cursor-pointer">
+    <Image
+      src="/work6.jpeg"
+      alt="work"
+      width={900}
+      height={900}
+      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+    />
+  </div>
+
 </div>
-
-            <div onClick={() => setSelectedImage("/work2.jpg")} className="cursor-pointer">
-  <Image
-    src="/work2.jpeg"
-    alt="work"
-    width={900}
-    height={900}
-    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-  />
-</div>
-
-            <div onClick={() => setSelectedImage("/work3.jpg")} className="cursor-pointer">
-  <Image
-    src="/work3.jpeg"
-    alt="work"
-    width={900}
-    height={900}
-    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-  />
-</div>
-            <div onClick={() => setSelectedImage("/work4.jpg")} className="cursor-pointer">
-  <Image
-    src="/work4.jpeg"
-    alt="work"
-    width={900}
-    height={900}
-    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-  />
-</div>
-
-<div onClick={() => setSelectedImage("/work5.jpg")} className="cursor-pointer">
-  <Image
-    src="/work5.jpeg"
-    alt="work"
-    width={900}
-    height={900}
-    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-  />
-</div>
-
-<div onClick={() => setSelectedImage("/work6.jpg")} className="cursor-pointer">
-  <Image
-    src="/work6.jpeg"
-    alt="work"
-    width={900}
-    height={900}
-    className="rounded-3xl object-cover transition duration-700 hover:scale-105"
-  />
-</div>
-
-          </div>
-
-
+</div> 
       </section>
 
       {/* ADVANTAGES */}
