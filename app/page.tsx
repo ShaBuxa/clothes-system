@@ -1,6 +1,53 @@
 import Image from "next/image";
 
 export default function Home() {
+  const catalog = [
+  {
+    image: "/catalog-1.jpeg",
+    name: "Футболка Oversize",
+    price: "8 900 ₸",
+  },
+  {
+    image: "/catalog-2.jpeg",
+    name: "Футболка Oversize",
+    price: "8 900 ₸",
+  },
+  {
+    image: "/catalog-3.jpeg",
+    name: "Футболка Oversize",
+    price: "6 500 ₸",
+  },
+  {
+    image: "/catalog-4.jpeg",
+    name: "Футболка Oversize",
+    price: "6 500 ₸",
+  },
+  {
+    image: "/catalog-5.jpeg",
+    name: "Футболка Oversize",
+    price: "6 500 ₸",
+  },
+  {
+    image: "/catalog-6.jpeg",
+    name: "Футболка Oversize",
+    price: "7 500 ₸",
+  },
+  {
+    image: "/catalog-7.jpeg",
+    name: "Футболка Oversize",
+    price: "6 500 ₸",
+  },
+  {
+    image: "/catalog-8.jpeg",
+    name: "Футболка Oversize",
+    price: "7 500 ₸",
+  },
+  {
+    image: "/catalog-9.jpeg",
+    name: "Футболка Oversize",
+    price: "7 500 ₸",
+  },
+];
   return (
     <main className="min-h-screen bg-[#090909] text-white">
 
@@ -31,7 +78,7 @@ export default function Home() {
           </nav>
 
           <a
-            href="https://wa.me/77000000000"
+            href="https://wa.me/77067075261"
             className="rounded-full border border-white px-6 py-3 transition hover:bg-white hover:text-black"
           >
             WhatsApp
@@ -80,17 +127,21 @@ export default function Home() {
 
             <div className="mt-14 flex flex-wrap gap-5">
 
-              <button className="rounded-full bg-white px-8 py-4 font-bold text-black transition hover:scale-105">
+              <a
+  href="https://www.instagram.com/clothes_system.print?igsh=enpxcDV5ZjVxNnF0"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full bg-white px-8 py-4 font-bold text-black transition hover:scale-105"
+>
+  Создать дизайн
+</a>
 
-                Создать дизайн
-
-              </button>
-
-              <button className="rounded-full border border-white px-8 py-4 transition hover:bg-white hover:text-black">
-
-                Смотреть каталог
-
-              </button>
+<a
+  href="#catalog"
+  className="rounded-full border border-white px-8 py-4 transition hover:bg-white hover:text-black"
+>
+  Смотреть каталог
+</a>
 
             </div>
 
@@ -115,125 +166,6 @@ export default function Home() {
 
       </section>      {/* CATALOG */}
 
-      <section
-        id="catalog"
-        className="border-t border-white/10 bg-[#0b0b0b] py-32"
-      >
-        <div className="mx-auto max-w-7xl px-8">
-
-          <p className="mb-4 uppercase tracking-[8px] text-neutral-500">
-            КАТАЛОГ
-          </p>
-
-          <h2 className="text-5xl font-black md:text-7xl">
-            ВЫБЕРИ
-            <br />
-            СВОЮ ОСНОВУ
-          </h2>
-
-          <div className="mt-20 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
-
-            <div className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition hover:border-white">
-
-              <Image
-                src="/catalog-shirt.jpg"
-                alt="Футболки"
-                width={700}
-                height={700}
-                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-
-              <div className="p-8">
-
-                <h3 className="text-2xl font-bold">
-                  Футболки
-                </h3>
-
-                <p className="mt-3 text-neutral-400">
-                  Классика и Oversize
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition hover:border-white">
-
-              <Image
-                src="/catalog-hoodie.jpg"
-                alt="Худи"
-                width={700}
-                height={700}
-                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-
-              <div className="p-8">
-
-                <h3 className="text-2xl font-bold">
-                  Худи
-                </h3>
-
-                <p className="mt-3 text-neutral-400">
-                  Premium Oversize
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition hover:border-white">
-
-              <Image
-                src="/catalog-sweatshirt.jpg"
-                alt="Свитшоты"
-                width={700}
-                height={700}
-                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-
-              <div className="p-8">
-
-                <h3 className="text-2xl font-bold">
-                  Свитшоты
-                </h3>
-
-                <p className="mt-3 text-neutral-400">
-                  Любые принты
-                </p>
-
-              </div>
-
-            </div>
-
-            <div className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition hover:border-white">
-
-              <Image
-                src="/catalog-cap.jpg"
-                alt="Кепки"
-                width={700}
-                height={700}
-                className="h-[360px] w-full object-cover transition duration-500 group-hover:scale-105"
-              />
-
-              <div className="p-8">
-
-                <h3 className="text-2xl font-bold">
-                  Кепки
-                </h3>
-
-                <p className="mt-3 text-neutral-400">
-                  Печать и вышивка
-                </p>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>      {/* OUR WORKS */}
 
       <section
         id="works"
@@ -458,53 +390,7 @@ export default function Home() {
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      {[
-  {
-image: "/catalog-1.jpeg",
-name: "Футболка Oversize",
-price: "8 900 ₸",
-},
-{
-image: "/catalog-2.jpeg",
-name: "Футболка Oversize",
-price: "8 900 ₸",
-},
-{
-image: "/catalog-3.jpeg",
-name: "Футболка Oversize",
-price: "6 500 ₸",
-},
-{
-image: "/catalog-4.jpeg",
-name: "Футболка Oversize",
-price: "6 500 ₸",
-},
-{
-image: "/catalog-5.jpeg",
-name: "Футболка Oversize",
-price: "6 500 ₸",
-},
-{
-image: "/catalog-6.jpeg",
-name: "Футболка Oversize",
-price: "7 500 ₸",
-},
-{
-image: "/catalog-7.jpeg",
-name: "Футболка Oversize",
-price: "6 500 ₸",
-},
-{
-image: "/catalog-8.jpeg",
-name: "Футболка Oversize",
-price: "7 500 ₸",
-},
-{
-image: "/catalog-9.jpeg",
-name: "Футболка Oversize",
-price: "7 500 ₸",
-},
-].map((item, index) => (
+{catalog.map((item, index) => (
 
         <div
   key={index}
@@ -536,20 +422,23 @@ price: "7 500 ₸",
       </span>
 
       <a
-        href="https://wa.me/77000000000"
+        href="https://wa.me/77067075261"
         className="rounded-full border border-white px-5 py-2 text-sm transition hover:bg-white hover:text-black"
       >
         Заказать
-      </a>
-
-       </div>
-
-       ))}
+            </a>
 
     </div>
 
-   </div>
+  </div>
 
+</div>
+
+))}
+
+    </div>
+
+  </div>
 </section>
       <footer className="border-t border-white/10 py-12">
 
