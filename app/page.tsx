@@ -156,7 +156,7 @@ export default function Home() {
             <div className="absolute h-[650px] w-[650px] rounded-full bg-white/10 blur-[140px]" />
 
             <Image
-              src="/hero-shirt.png"
+              src="/black-shirt.png"
               alt="Hero"
               width={700}
               height={850}
@@ -190,7 +190,7 @@ export default function Home() {
 
           <div onClick={() => setSelectedImage("/work1.jpg")} className="cursor-pointer">
   <Image
-    src="/work1.jpg"
+    src="/work1.jpeg"
     alt="work"
     width={900}
     height={900}
@@ -200,7 +200,7 @@ export default function Home() {
 
             <div onClick={() => setSelectedImage("/work2.jpg")} className="cursor-pointer">
   <Image
-    src="/work2.jpg"
+    src="/work2.jpeg"
     alt="work"
     width={900}
     height={900}
@@ -210,7 +210,7 @@ export default function Home() {
 
             <div onClick={() => setSelectedImage("/work3.jpg")} className="cursor-pointer">
   <Image
-    src="/work3.jpg"
+    src="/work3.jpeg"
     alt="work"
     width={900}
     height={900}
@@ -219,7 +219,7 @@ export default function Home() {
 </div>
             <div onClick={() => setSelectedImage("/work4.jpg")} className="cursor-pointer">
   <Image
-    src="/work4.jpg"
+    src="/work4.jpeg"
     alt="work"
     width={900}
     height={900}
@@ -229,7 +229,7 @@ export default function Home() {
 
 <div onClick={() => setSelectedImage("/work5.jpg")} className="cursor-pointer">
   <Image
-    src="/work5.jpg"
+    src="/work5.jpeg"
     alt="work"
     width={900}
     height={900}
@@ -239,7 +239,7 @@ export default function Home() {
 
 <div onClick={() => setSelectedImage("/work6.jpg")} className="cursor-pointer">
   <Image
-    src="/work6.jpg"
+    src="/work6.jpeg"
     alt="work"
     width={900}
     height={900}
