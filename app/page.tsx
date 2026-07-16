@@ -440,7 +440,7 @@ export default function Home() {
           </p>
 
           <a
-            href="https://wa.me/77000000000"
+            href="https://wa.me/77067075261"
             className="mt-14 inline-block rounded-full bg-white px-10 py-5 text-lg font-bold text-black transition hover:scale-105"
           >
             Написать в WhatsApp
@@ -459,8 +459,7 @@ export default function Home() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
       {[
-       [
-{
+  {
 image: "/catalog-1.jpeg",
 name: "Футболка Oversize",
 price: "8 900 ₸",
@@ -543,13 +542,13 @@ price: "7 500 ₸",
         Заказать
       </a>
 
+       </div>
+
+       ))}
+
     </div>
 
-  </div>
-
-</div>
-
-))}
+   </div>
 
 </section>
       <footer className="border-t border-white/10 py-12">
