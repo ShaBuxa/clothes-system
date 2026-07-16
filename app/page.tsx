@@ -191,7 +191,7 @@ export default function Home() {
               alt="work"
               width={900}
               height={900}
-              className="rounded-3xl object-cover transition duration-500 hover:scale-[1.02]"
+              className="rounded-3xl object-cover transition duration-700 hover:scale-105"
             />
 
             <Image
@@ -199,7 +199,7 @@ export default function Home() {
               alt="work"
               width={900}
               height={900}
-              className="rounded-3xl object-cover transition duration-500 hover:scale-[1.02]"
+              className="rounded-3xl object-cover transition duration-700 hover:scale-105"
             />
 
             <Image
@@ -207,8 +207,31 @@ export default function Home() {
               alt="work"
               width={900}
               height={900}
-              className="rounded-3xl object-cover transition duration-500 hover:scale-[1.02]"
+              className="rounded-3xl object-cover transition duration-700 hover:scale-105"
             />
+            <Image
+  src="/work4.jpg"
+  alt="work"
+  width={900}
+  height={900}
+  className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+/>
+
+<Image
+  src="/work5.jpg"
+  alt="work"
+  width={900}
+  height={900}
+  className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+/>
+
+<Image
+  src="/work6.jpg"
+  alt="work"
+  width={900}
+  height={900}
+  className="rounded-3xl object-cover transition duration-700 hover:scale-105"
+/>
 
           </div>
 
@@ -455,7 +478,22 @@ export default function Home() {
         </div>
 
       </footer>
-
+<a
+  href="https://wa.me/77067075261"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 right-6 z-50 rounded-full bg-[#25D366] p-4 shadow-2xl transition duration-300 hover:scale-110"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="30"
+    height="30"
+    viewBox="0 0 24 24"
+    fill="white"
+  >
+    <path d="M20.52 3.48A11.79 11.79 0 0 0 12.03 0C5.4 0 .02 5.38.02 12c0 2.11.55 4.17 1.59 5.99L0 24l6.18-1.61A11.9 11.9 0 0 0 12.03 24C18.66 24 24 18.62 24 12a11.8 11.8 0 0 0-3.48-8.52ZM12.03 21.8a9.74 9.74 0 0 1-4.97-1.37l-.36-.21-3.67.96.98-3.58-.24-.37A9.76 9.76 0 1 1 12.03 21.8Zm5.36-7.32c-.29-.15-1.72-.85-1.99-.95-.27-.1-.46-.15-.66.15-.19.29-.75.95-.91 1.15-.17.19-.33.22-.62.08-.29-.15-1.2-.44-2.29-1.4-.85-.76-1.42-1.69-1.58-1.98-.17-.29-.02-.45.12-.6.13-.13.29-.33.44-.49.15-.17.19-.29.29-.48.1-.19.05-.37-.02-.52-.08-.15-.66-1.59-.91-2.18-.24-.58-.49-.5-.66-.51h-.56c-.19 0-.49.07-.75.37-.26.29-.98.96-.98 2.34 0 1.38 1 2.71 1.14 2.9.15.19 1.96 2.99 4.75 4.19.66.28 1.17.45 1.57.58.66.21 1.26.18 1.73.11.53-.08 1.72-.7 1.96-1.38.24-.67.24-1.25.17-1.37-.07-.12-.27-.19-.56-.33Z"/>
+  </svg>
+</a>
     </main>
   );
 }
