@@ -5,77 +5,291 @@ import { useState } from "react";
 
 export default function Home() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+
+const [selectedColor, setSelectedColor] = useState("Черный");
+
+const [selectedSize, setSelectedSize] = useState("M");
+
+const [quantity, setQuantity] = useState(1);
   const catalog = [
   {
-    image: "/catalog-1.jpeg",
-    name: "Футболка Oversize",
-    price: "8 900 ₸",
-  },
+  image: "/catalog-1.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
   {
-    image: "/catalog-2.jpeg",
-    name: "Футболка Oversize",
-    price: "8 900 ₸",
-  },
+  image: "/catalog-2.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
   {
-    image: "/catalog-3.jpeg",
-    name: "Футболка Oversize",
-    price: "6 500 ₸",
-  },
+  image: "/catalog-3.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
   {
-    image: "/catalog-4.jpeg",
-    name: "Футболка Oversize",
-    price: "6 500 ₸",
-  },
+  image: "/catalog-4.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
   {
-    image: "/catalog-5.jpeg",
-    name: "Футболка Oversize",
-    price: "6 500 ₸",
-  },
+  image: "/catalog-5.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
   {
-    image: "/catalog-6.jpeg",
-    name: "Футболка Oversize",
-    price: "7 500 ₸",
-  },
+  image: "/catalog-6.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
   {
-    image: "/catalog-7.jpeg",
-    name: "Футболка Oversize",
-    price: "6 500 ₸",
-  },
+  image: "/catalog-7.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
   {
-    image: "/catalog-8.jpeg",
-    name: "Футболка Oversize",
-    price: "7 500 ₸",
-  },
+  image: "/catalog-8.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
   {
-    image: "/catalog-9.jpeg",
-    name: "Футболка Oversize",
-    price: "7 500 ₸",
-  },
+  image: "/catalog-9.jpeg",
+  name: "Футболка Oversize",
+  price: "8 900 ₸",
+
+  colors: [
+    { name: "Черный", hex: "#000000" },
+    { name: "Белый", hex: "#ffffff" },
+    { name: "Графит", hex: "#4B4B4B" },
+    { name: "Темно-синий", hex: "#1D2F6F" },
+    { name: "Электрик", hex: "#007BFF" },
+    { name: "Голубой", hex: "#6EC6FF" },
+    { name: "Красный", hex: "#D62828" },
+    { name: "Фиолетовый", hex: "#7B2CBF" },
+    { name: "Зеленый", hex: "#2E8B57" },
+    { name: "Какао", hex: "#8B5E3C" }
+  ],
+
+  sizes: [
+    "XS",
+    "S",
+    "M",
+    "L",
+    "XL",
+    "2XL",
+    "3XL"
+  ]
+},
 ];
   return (
     <main className="min-h-screen bg-[#090909] text-white">
 
       {/* HEADER */}
 
-      <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-black/40 backdrop-blur-xl">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
 
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-8">
+        <div className="mx-auto flex h-20 max-w-[1600px] items-center justify-between px-8">
 
-          <h1 className="text-xl font-black tracking-[6px]">
+          <h1 className="text-xl md:text-2xl font-black tracking-[0.35em]">
             CLOTHES SYSTEM
           </h1>
 
           <nav className="hidden gap-10 text-sm uppercase tracking-[3px] md:flex">
 
-            <a href="#catalog" className="hover:text-neutral-400">
+            <a href="#catalog" className="transition duration-300 hover:text-white hover:opacity-100 opacity-70">
               Каталог
             </a>
 
-            <a href="#works" className="hover:text-neutral-400">
+            <a href="#works" className="transition duration-300 hover:text-white hover:opacity-100 opacity-70">
               Наши работы
             </a>
 
-            <a href="#contacts" className="hover:text-neutral-400">
+            <a href="#contacts" className="transition duration-300 hover:text-white hover:opacity-100 opacity-70">
               Контакты
             </a>
 
@@ -93,7 +307,7 @@ export default function Home() {
       </header>
 
       {/* HERO */}
-
+<div className="mx-auto mt-24 h-px max-w-[1600px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
       <section className="relative flex min-h-screen items-center">
 
         <div className="mx-auto grid max-w-7xl items-center gap-20 px-8 pt-24 lg:grid-cols-2">
@@ -132,10 +346,10 @@ export default function Home() {
             <div className="mt-14 flex flex-wrap gap-5">
 
               <a
-  href="https://www.instagram.com/clothes_system.print?igsh=enpxcDV5ZjVxNnF0"
+  href="https://wa.me/77067075261?text=Здравствуйте! Хочу создать свой дизайн."
   target="_blank"
   rel="noopener noreferrer"
-  className="rounded-full bg-white px-8 py-4 font-bold text-black transition hover:scale-105"
+  className="rounded-full bg-white px-8 py-4 font-bold text-black transition hover:scale-110 hover:shadow-2xl"
 >
   Создать дизайн
 </a>
@@ -161,7 +375,7 @@ export default function Home() {
   width={1400}
   height={1700}
   priority
-  className="relative w-[1300px] h-auto"
+  className="relative w-[750px] xl:w-[900px] h-auto"
 />
 
           </div>
@@ -173,7 +387,7 @@ export default function Home() {
 
       <section
         id="works"
-        className="py-32"
+        className="py-20"
       >
 
         <div className="mx-auto max-w-7xl px-8">
@@ -183,12 +397,12 @@ export default function Home() {
           </p>
 
           <h2 className="text-5xl font-black md:text-7xl">
-  РЕАЛЬНЫЕ
-  <br />
-  ЗАКАЗЫ
+  НАШИ
+<br />
+РАБОТЫ
 </h2>
 
-<div className="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<div className="mt-12 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-5">
 
   <div onClick={() => setSelectedImage("/work1.jpeg")} className="cursor-pointer">
     <Image
@@ -196,7 +410,7 @@ export default function Home() {
       alt="work"
       width={900}
       height={900}
-      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+      className="w-full aspect-square rounded-2xl object-cover transition duration-300 hover:scale-110 active:scale-95"
     />
   </div>
 
@@ -206,7 +420,7 @@ export default function Home() {
       alt="work"
       width={900}
       height={900}
-      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+      className="w-full aspect-square rounded-2xl object-cover transition duration-300 hover:scale-110 active:scale-95"
     />
   </div>
 
@@ -216,7 +430,7 @@ export default function Home() {
       alt="work"
       width={900}
       height={900}
-      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+      className="w-full aspect-square rounded-2xl object-cover transition duration-300 hover:scale-110 active:scale-95"
     />
   </div>
 
@@ -226,7 +440,7 @@ export default function Home() {
       alt="work"
       width={900}
       height={900}
-      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+      className="w-full aspect-square rounded-2xl object-cover transition duration-300 hover:scale-110 active:scale-95"
     />
   </div>
 
@@ -236,7 +450,7 @@ export default function Home() {
       alt="work"
       width={900}
       height={900}
-      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+      className="w-full aspect-square rounded-2xl object-cover transition duration-300 hover:scale-110 active:scale-95"
     />
   </div>
 
@@ -246,7 +460,7 @@ export default function Home() {
       alt="work"
       width={900}
       height={900}
-      className="w-full h-64 rounded-3xl object-cover transition duration-500 hover:scale-105"
+      className="w-full aspect-square rounded-2xl object-cover transition duration-300 hover:scale-110 active:scale-95"
     />
   </div>
 
@@ -338,7 +552,7 @@ export default function Home() {
 
       <section className="py-32">
 
-        <div className="mx-auto max-w-7xl px-8">
+        <div className="mx-auto max-w-[1600px] px-8">
 
           <p className="mb-4 uppercase tracking-[8px] text-neutral-500">
             ОТЗЫВЫ
@@ -410,8 +624,8 @@ export default function Home() {
           </p>
 
           <a
-            href="https://wa.me/77067075261"
-            className="mt-14 inline-block rounded-full bg-white px-10 py-5 text-lg font-bold text-black transition hover:scale-105"
+            href="https://wa.me/77067075261?text=Здравствуйте! Хочу сделать заказ."
+            className="mt-14 inline-block rounded-full bg-white px-10 py-5 text-lg font-bold text-black transition hover:scale-110 active:scale-95"
           >
             Написать в WhatsApp
           </a>
@@ -426,13 +640,19 @@ export default function Home() {
       КАТАЛОГ
     </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
 
 {catalog.map((item, index) => (
 
-        <div
+       <div
   key={index}
-  className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111] transition duration-300 hover:-translate-y-2 hover:border-white/30"
+  onClick={() => {
+    setSelectedProduct(item);
+    setSelectedColor("Черный");
+    setSelectedSize("M");
+    setQuantity(1);
+  }}
+  className="group cursor-pointer overflow-hidden rounded-3xl transition duration-500 hover:-translate-y-2 hover:shadow-[0_25px_80px_rgba(255,255,255,0.08)]"
 >
 
   <Image
@@ -440,12 +660,12 @@ export default function Home() {
     alt={item.name}
     width={700}
     height={900}
-    className="aspect-[4/5] w-full object-cover transition duration-500 group-hover:scale-105"
+    className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-110"
   />
 
   <div className="p-6">
 
-    <h3 className="text-xl font-bold">
+    <h3 className="text-2xl font-semibold tracking-wide">
       {item.name}
     </h3>
 
@@ -453,18 +673,17 @@ export default function Home() {
       Premium хлопок · Индивидуальный принт
     </p>
 
-    <div className="mt-5 flex items-center justify-between">
+    <div className="mt-6 flex items-center justify-between">
 
-      <span className="text-xl font-bold">
+      <span className="text-2xl font-black">
         {item.price}
       </span>
 
-      <a
-        href="https://wa.me/77067075261"
-        className="rounded-full border border-white px-5 py-2 text-sm transition hover:bg-white hover:text-black"
-      >
-        Заказать
-            </a>
+      <button
+  className="rounded-full border border-white px-5 py-2 text-sm transition hover:bg-white hover:text-black"
+>
+  Заказать
+</button>
 
     </div>
 
@@ -478,33 +697,247 @@ export default function Home() {
 
   </div>
 </section>
-      <footer className="border-t border-white/10 py-12">
+    <footer className="border-t border-white/10 py-16">
 
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-8 md:flex-row">
+  <div className="mx-auto flex max-w-[1600px] flex-col gap-12 px-8 md:flex-row md:justify-between">
 
-          <h2 className="text-xl font-black tracking-[6px]">
-            CLOTHES SYSTEM
+    <div>
+      <h2 className="text-2xl font-black tracking-[8px]">
+        CLOTHES SYSTEM
+      </h2>
+
+      <p className="mt-5 max-w-sm leading-8 text-neutral-400">
+        Премиальная одежда с индивидуальной печатью.
+        Изготавливаем футболки, худи и мерч от 1 экземпляра.
+      </p>
+    </div>
+
+    <div>
+      <h3 className="mb-4 text-sm uppercase tracking-[4px] text-neutral-500">
+        Контакты
+      </h3>
+
+      <div className="space-y-3">
+
+        <a
+          href="https://wa.me/77067075261"
+          className="block transition hover:text-white"
+        >
+          WhatsApp
+        </a>
+
+        <a
+          href="https://www.instagram.com/clothes_system.print"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block transition hover:text-white"
+        >
+          Instagram
+        </a>
+
+      </div>
+    </div>
+
+    <div className="text-right">
+
+      <h3 className="mb-4 text-sm uppercase tracking-[4px] text-neutral-500">
+        Информация
+      </h3>
+
+      <p className="text-neutral-400">
+        Алматы
+      </p>
+
+      <p className="mt-2 text-neutral-400">
+        Изготовление 1–2 дня
+      </p>
+
+      <p className="mt-8 text-sm text-neutral-600">
+        © 2026 CLOTHES SYSTEM
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+{selectedImage && (
+  <div
+  onClick={() => setSelectedImage(null)}
+  className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-6"
+>
+    <Image
+  src={selectedImage}
+  alt="preview"
+  width={1800}
+  height={1800}
+  className="max-h-[95vh] max-w-[95vw] rounded-[32px] object-contain animate-[fadeIn_.25s_ease]"
+/>
+  </div>
+)}
+{selectedProduct && (
+  <div
+    className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 backdrop-blur-sm p-6 animate-[fadeIn_.2s_ease]"
+    onClick={() => setSelectedProduct(null)}
+  >
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="relative w-full max-w-5xl overflow-hidden rounded-3xl border border-white/10 bg-neutral-950 animate-[zoom_.25s_ease]"
+    >
+      <div className="grid md:grid-cols-2">
+
+        <div className="bg-black">
+          <Image
+            src={selectedProduct.image}
+            alt={selectedProduct.name}
+            width={900}
+            height={1200}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="p-10 flex flex-col">
+          <button
+  onClick={() => setSelectedProduct(null)}
+  className="absolute right-6 top-6 text-4xl leading-none text-white/60 transition hover:text-white"
+>
+  ×
+</button>
+<button
+  onClick={() => setSelectedProduct(null)}
+  className="absolute right-6 top-6 text-4xl leading-none text-white/60 transition hover:text-white"
+>
+  ×
+</button>
+          <h2 className="text-4xl font-black">
+            {selectedProduct.name}
           </h2>
 
-          <p className="text-neutral-500">
-            © 2026 Clothes System. All rights reserved.
+          <p className="mt-3 text-2xl font-bold">
+            {selectedProduct.price}
           </p>
+
+          <div className="mt-10">
+
+            <p className="mb-3 text-neutral-400">
+              Цвет
+            </p>
+
+            <div className="flex gap-3">
+
+              {selectedProduct.colors.map((color: any) => (
+                <button
+                  key={color.name}
+                  onClick={() => setSelectedColor(color.name)}
+                  className={`rounded-full border px-5 py-2 transition ${
+                    selectedColor === color.name
+                      ? "border-white bg-white text-black"
+                      : "border-white/20"
+                  }`}
+                >
+                  <div
+  className={`h-10 w-10 rounded-full border-4 transition duration-300 ${
+    selectedColor === color.name
+      ? "border-white scale-110"
+      : "border-transparent"
+  }`}
+  style={{
+    backgroundColor: color.hex,
+  }}
+/>
+                </button>
+              ))}
+
+            </div>
+
+          </div>
+
+          <div className="mt-8">
+
+            <p className="mb-3 text-neutral-400">
+              Размер
+            </p>
+
+            <div className="flex flex-wrap gap-2">
+
+              {selectedProduct.sizes.map((size: string) => (
+                <button
+                  key={size}
+                  onClick={()=>setSelectedSize(size)}
+                  className={`h-12 w-12 rounded-xl border transition ${
+                    selectedSize===size
+                      ? "border-white bg-white text-black"
+                      : "border-white/20"
+                  }`}
+                >
+                  {size}
+                </button>
+              ))}
+
+            </div>
+
+          </div>
+
+          <div className="mt-8">
+
+            <p className="mb-3 text-neutral-400">
+              Количество
+            </p>
+
+            <div className="flex items-center gap-4">
+
+              <button
+                onClick={()=>
+                  setQuantity(Math.max(1,quantity-1))
+                }
+                className="h-12 w-12 rounded-xl border border-white/20 transition hover:bg-white hover:text-black active:scale-95"
+              >
+                −
+              </button>
+
+              <span className="text-2xl font-bold">
+                {quantity}
+              </span>
+
+              <button
+                onClick={()=>
+                  setQuantity(quantity+1)
+                }
+                className="h-12 w-12 rounded-xl border border-white/20 transition hover:bg-white hover:text-black active:scale-95"
+              >
+                +
+              </button>
+
+            </div>
+
+          </div>
+
+          <a
+            className="mt-10 rounded-2xl bg-white py-5 text-center font-bold text-black transition hover:opacity-90"
+            href={`https://wa.me/77067075261?text=${encodeURIComponent(
+`Здравствуйте!
+
+Хочу заказать:
+
+Товар: ${selectedProduct.name}
+
+Цвет: ${selectedColor}
+
+Размер: ${selectedSize}
+
+Количество: ${quantity}
+
+Спасибо!`
+            )}`}
+            target="_blank"
+          >
+            Заказать в WhatsApp
+          </a>
 
         </div>
 
-      </footer>
-{selectedImage && (
-  <div
-    onClick={() => setSelectedImage(null)}
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
-  >
-    <Image
-      src={selectedImage}
-      alt="preview"
-      width={1200}
-      height={1200}
-      className="max-h-[90vh] max-w-[90vw] rounded-2xl object-contain"
-    />
+      </div>
+    </div>
   </div>
 )}
 <a
