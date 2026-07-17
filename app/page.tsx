@@ -15,7 +15,7 @@ const [quantity, setQuantity] = useState(1);
   const catalog = [
   {
   image: "/catalog-1.jpeg",
-  name: "Футболка Oversize",
+  name: "Футболка Classic",
   price: "8 900 ₸",
 
   colors: [
@@ -43,7 +43,7 @@ const [quantity, setQuantity] = useState(1);
 },
   {
   image: "/catalog-2.jpeg",
-  name: "Футболка Oversize",
+  name: "Футболка Classic",
   price: "8 900 ₸",
 
   colors: [
@@ -71,8 +71,8 @@ const [quantity, setQuantity] = useState(1);
 },
   {
   image: "/catalog-3.jpeg",
-  name: "Футболка Oversize",
-  price: "8 900 ₸",
+  name: "Футболка Classic",
+  price: "6 500 ₸",
 
   colors: [
     { name: "Черный", hex: "#000000" },
@@ -99,8 +99,8 @@ const [quantity, setQuantity] = useState(1);
 },
   {
   image: "/catalog-4.jpeg",
-  name: "Футболка Oversize",
-  price: "8 900 ₸",
+  name: "Футболка Classic",
+  price: "6 500 ₸",
 
   colors: [
     { name: "Черный", hex: "#000000" },
@@ -128,7 +128,7 @@ const [quantity, setQuantity] = useState(1);
   {
   image: "/catalog-5.jpeg",
   name: "Футболка Oversize",
-  price: "8 900 ₸",
+  price: "7 700 ₸",
 
   colors: [
     { name: "Черный", hex: "#000000" },
@@ -156,7 +156,7 @@ const [quantity, setQuantity] = useState(1);
   {
   image: "/catalog-6.jpeg",
   name: "Футболка Oversize",
-  price: "8 900 ₸",
+  price: "7 700 ₸",
 
   colors: [
     { name: "Черный", hex: "#000000" },
@@ -183,8 +183,8 @@ const [quantity, setQuantity] = useState(1);
 },
   {
   image: "/catalog-7.jpeg",
-  name: "Футболка Oversize",
-  price: "8 900 ₸",
+  name: "Футболка Classic",
+  price: "6 500 ₸",
 
   colors: [
     { name: "Черный", hex: "#000000" },
@@ -212,7 +212,7 @@ const [quantity, setQuantity] = useState(1);
   {
   image: "/catalog-8.jpeg",
   name: "Футболка Oversize",
-  price: "8 900 ₸",
+  price: "7 700 ₸",
 
   colors: [
     { name: "Черный", hex: "#000000" },
@@ -240,7 +240,7 @@ const [quantity, setQuantity] = useState(1);
   {
   image: "/catalog-9.jpeg",
   name: "Футболка Oversize",
-  price: "8 900 ₸",
+  price: "7 700 ₸",
 
   colors: [
     { name: "Черный", hex: "#000000" },
@@ -823,7 +823,7 @@ const [quantity, setQuantity] = useState(1);
               Цвет
             </p>
 
-            <div className="flex gap-3">
+            <div className="grid grid-cols-5 gap-3">
 
               {selectedProduct.colors.map((color: any) => (
                 <button
@@ -836,7 +836,7 @@ const [quantity, setQuantity] = useState(1);
                   }`}
                 >
                   <div
-  className={`h-10 w-10 rounded-full border-4 transition duration-300 ${
+  className={`h-7 w-7 rounded-full border-4 transition duration-300 ${
     selectedColor === color.name
       ? "border-white scale-110"
       : "border-transparent"
